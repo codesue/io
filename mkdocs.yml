@@ -1,0 +1,10 @@
+site_name: Io
+site_description: A mini Python REPL web component
+copyright: © 2023 Suzen Fylke
+nav:
+  - index.md
+  - Install: "https://www.npmjs.com/package/io-repl"
+  - Source: "https://github.com/codesue/io/"
+theme:
+  name: walt
+  site_emoji: 🌑

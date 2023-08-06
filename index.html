@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Io</title>
+  <meta name='description' content='A mini Python REPL for the browser'>
+  <link rel='icon' href='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌑</text></svg>'>
+  <link rel='stylesheet' href='./io-repl.css'>
+  <script type='module' src='./io-repl.js'></script>
+  <style>
+    * { box-sizing: border-box; }
+
+    html { overflow-y: auto; }
+
+    body {
+      background: #f8f8fd;
+      color: #1b1b1b;
+      font-family: sans-serif;
+      font-size: 16px;
+      line-height: 1.5;
+      max-width: 40;
+      margin: 2em 1em;
+    }
+
+    main {
+      display: block;
+      max-width: 78ch;
+      margin: auto;
+    }
+
+    h1 { 
+      font-weight: 300;
+      margin-top: 3em;
+      text-transform: lowercase;
+    }
+
+    a { color: inherit; }
+
+    code, kbd {
+      font-size: 0.875em;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Io</h1>
+    <p>
+      Io is web component library for running Python codeblocks in
+      the browser. Its core element is <code>&lt;io-repl&gt;</code>, a mini Python REPL powered
+      by <a href='https://pyodide.org/' target='_blank' rel='noopener noreferrer'>Pyodide</a>.
+    </p>
+    <p>
+      Try it out! Enter some Python code in the text area below and click the
+      <code>Run</code> button to execute it. You can also use <kbd>Shift</kbd> +
+      <kbd>Enter</kbd> to run the code.
+    </p>
+    <io-repl>import this</io-repl>
+  </main>
+</body>
+</html>
