@@ -1,6 +1,6 @@
 {
   "name": "io-repl",
-  "version": "0.1.0-dev.0",
+  "version": "0.1.0",
   "author": "Suzen Fylke",
   "description": "A mini Python REPL for the browser",
   "keywords": [
