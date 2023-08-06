@@ -18,7 +18,7 @@ Try it out! Enter some Python code in the text area below and click the
     --input-border-radius: 2px;
   }
 </style>
-<script type='module' src='https://cdn.jsdelivr.net/npm/io-repl@0.0.2/io-repl.js'></script>
+<script type='module' src='https://www.unpkg.com/io-repl/io-repl.js'></script>
 <io-repl></io-repl>
 
 ## Quickasrt
@@ -26,7 +26,7 @@ Try it out! Enter some Python code in the text area below and click the
 Add the `<io-repl>` script to the head of your HTML document:
 
 ```html
-<script type='module' src='https://cdn.jsdelivr.net/npm/io-repl@0.0.2/io-repl.js'></script>
+<script type='module' src='https://www.unpkg.com/io-repl/io-repl.js'></script>
 ```
 
 Add the following rule to your stylesheet to prevent the component from being
@@ -39,7 +39,7 @@ io-repl:not(:defined) {
 }
 ```
 
-Use `<io-repl>` in your html document:
+Use `<io-repl>` in your HTML document:
 
 ```html
 <io-repl>import this</io-repl>

@@ -19,7 +19,7 @@ to use in your projects, consider using [PyScript](https://pyscript.net) instead
 Add the `<io-repl>` script to the head of your HTML document:
 
 ```html
-<script type='module' src='https://cdn.jsdelivr.net/npm/io-repl@0.0.2/io-repl.js'></script>
+<script type='module' src='https://www.unpkg.com/io-repl/io-repl.js'></script>
 ```
 
 Add the following rule to your stylesheet to prevent the component from being
@@ -32,7 +32,7 @@ io-repl:not(:defined) {
 }
 ```
 
-Use `<io-repl>` in your html document:
+Use `<io-repl>` in your HTML document:
 
 ```html
 <io-repl>import this</io-repl>
@@ -43,7 +43,7 @@ Use `<io-repl>` in your html document:
 ### Linking to a CDN
 
 ```html
-<script type='module' src='https://cdn.jsdelivr.net/npm/io-repl@0.0.2/io-repl.js'></script>
+<script type='module' src='https://www.unpkg.com/io-repl/io-repl.js'></script>
 ```
 
 ### Installing from npm
@@ -137,12 +137,6 @@ io-repl:not(:defined) {
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
 }
-```
-
-Alternatively, link to [io-repl.css](io-repl.css):
-
-```html
-<link rel="stylesheet" href="io-repl/io-repl.css">
 ```
 
 #### Customizing component styles
