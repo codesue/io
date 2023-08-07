@@ -164,6 +164,16 @@ io-repl {
 }
 ```
 
+Alternatively, you can use the elements' `part` attribute:
+
+```css
+io-repl::part(button) {
+  border-radius: 0.25em;
+}
+```
+
+Parts include `label`, `button`, `input`, `input-container`, and `output`.
+
 ## Developing the library
 
 ### Running the local demo with `web-dev-server`

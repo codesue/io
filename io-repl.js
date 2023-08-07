@@ -14,79 +14,51 @@ const _STYLE = `
 :host {
   --margin: 0;
   --padding: 1em;
-  --line-height: 1.5;
-  --button-cursor: pointer;
-  --button-border: none;
-  --button-border-radius: inherit;
-  --button-background-color: black;
-  --button-text-color: white;
-  --button-font-family: inherit;
-  --button-font-size: 0.875em;
-  --button-font-weight: 300;
-  --button-letter-spacing: 0.1em;
-  --button-padding: 0.5em 1em;
-  --button-margin: 1em var(--margin);
-  --input-border: 1px solid black;
-  --input-border-radius: inherit;
-  --input-background-color: white;
-  --input-text-color: black;
-  --input-font-family: monospace;
-  --input-font-size: 0.875em;
-  --input-font-weight: inherit;
-  --input-padding: 1em;
-  --input-margin: 0.5em var(--margin);
-  --output-background-color: inherit;
-  --output-text-color: inherit;
-  --output-font-family: monospace;
-  --output-font-size: 0.875em;
-  --output-font-weight: inherit;
-  --output-padding: inherit;
-  --output-margin: 0.5em var(--margin);
 
   display: block;
-  line-height: var(--line-height);
+  line-height: 1.5;
 }
 
 button {
-  cursor: var(--button-cursor);
-  color: var(--button-text-color);
-  background: var(--button-background-color);
-  font-family: var(--button-font-family);
-  font-size: var(--button-font-size);
-  font-weight: var(--button-font-weight);
-  border: var(--button-border);
-  border-radius: var(--button-border-radius);
-  letter-spacing: var(--button-letter-spacing);
-  padding: var(--button-padding);
-  margin: var(--button-margin);
+  cursor: var(--button-cursor, pointer);
+  color: var(--button-text-color, white);
+  background: var(--button-background-color, black);
+  font-family: var(--button-font-family, inherit);
+  font-size: var(--button-font-size, 0.875em);
+  font-weight: var(--button-font-weight, 300);
+  border: var(--button-border, none);
+  border-radius: var(--button-border-radius, inherit);
+  letter-spacing: var(--button-letter-spacing, 0.1em);
+  padding: var(--button-padding, 0.5em 1em);
+  margin: var(--button-margin, 1em var(--margin));
 }
 
 .io-repl-input,
-.io-repl-output:disabled {
+.io-repl-input:disabled {
   width: 100%;
   min-height: 4em;
   resize: none;
   overflow: hidden;
   box-sizing: border-box;
-  border: var(--input-border);
-  border-radius: var(--input-border-radius);
-  padding: var(--input-padding);
-  margin: var(--input-margin);
-  background: var(--input-background-color);
-  color: var(--input-text-color);
-  font-family: var(--input-font-family);
-  font-size: var(--input-font-size);
-  font-weight: var(--input-font-weight);
+  border: var(--input-border, 1px solid black);
+  border-radius: var(--input-border-radius, inherit);
+  background: var(--input-background-color, white);
+  color: var(--input-text-color, black);
+  font-family: var(--input-font-family, monospace);
+  font-size: var(--input-font-size, 0.875em);
+  font-weight: var(--input-font-weight, inherit);
+  padding: var(--input-padding, 1em);
+  margin: var(--input-margin, 0.5em var(--margin));
 }
 
 .io-repl-output {
-  background: var(--output-background-color);
-  color: var(--output-text-color);
-  font-family: var(--output-font-family);
-  font-size: var(--output-font-size);
-  font-weight: var(--output-font-weight);
-  margin: var(--output-margin);
-  padding: var(--output-padding);
+  background: var(--output-background-color, inherit);
+  color: var(--output-text-color, inherit);
+  font-family: var(--output-font-family, monospace);
+  font-size: var(--output-font-size, 0.875em);
+  font-weight: var(--output-font-weight, inherit);
+  padding: var(--output-padding, inherit);
+  margin: var(--output-margin, 0.5em var(--margin));
 }
 
 .sr-only:not(:focus):not(:active) {
@@ -117,6 +89,7 @@ function _createStyle() {
  */
 function _createButton() {
   const button = document.createElement('button');
+  button.setAttribute('part', 'button');
   button.setAttribute('type', 'button');
   button.setAttribute('id', _RUN_BUTTON_ID);
   button.setAttribute('class', _RUN_BUTTON_ID);
@@ -130,6 +103,7 @@ function _createButton() {
  */
 function _createLabel() {
   const label = document.createElement('label');
+  label.setAttribute('part', 'label');
   label.setAttribute('for', _INPUT_ID);
   label.setAttribute('class', 'sr-only');
   label.textContent = 'Input:';
@@ -143,6 +117,7 @@ function _createLabel() {
  */
 function _createTextarea() {
   const textarea = document.createElement('textarea');
+  textarea.setAttribute('part', 'input');
   textarea.setAttribute('name', _INPUT_ID);
   textarea.setAttribute('id', _INPUT_ID);
   textarea.setAttribute('class', _INPUT_ID);
@@ -156,6 +131,7 @@ function _createTextarea() {
  */
 function _createInputContainer() {
   const form = document.createElement('form');
+  form.setAttribute('part', 'input-container');
   form.setAttribute('action', '#');
   form.appendChild(_createLabel());
   form.appendChild(_createTextarea());
@@ -170,6 +146,7 @@ function _createInputContainer() {
  */
 function _createOutputContainer() {
   const output = document.createElement('div');
+  output.setAttribute('part', 'output');
   output.setAttribute('id', _OUTPUT_ID);
   output.setAttribute('class', _OUTPUT_ID);
   return output;
