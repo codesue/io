@@ -8,3 +8,5 @@ nav:
 theme:
   name: walt
   site_emoji: 🌑
+extra_css:
+  - style.css

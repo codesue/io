@@ -7,17 +7,6 @@ Try it out! Enter some Python code in the text area below and click the
 <code>Run</code> button to execute it. You can also use <kbd>Shift</kbd> +
 <kbd>Enter</kbd> to run the code.
 
-<style>
-  io-repl:not(:defined) {
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-  }
-  io-repl {
-    --button-border-radius: 2px;
-    --button-font-family: monospace;
-    --input-border-radius: 2px;
-  }
-</style>
 <script type='module' src='https://www.unpkg.com/io-repl/io-repl.js'></script>
 <io-repl></io-repl>
 
