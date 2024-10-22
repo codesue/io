@@ -10,7 +10,7 @@ Try it out! Enter some Python code in the text area below and click the
 <script type='module' src='https://www.unpkg.com/io-repl/io-repl.js'></script>
 <io-repl></io-repl>
 
-## Quickasrt
+## Quickstart
 
 Add the `<io-repl>` script to the head of your HTML document:
 

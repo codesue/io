@@ -14,7 +14,7 @@ Io is a lightweight and **highly experimental** library. It's just for fun and
 shouldn't be used for anything serious. If you're looking for a similar library
 to use in your projects, consider using [PyScript](https://pyscript.net) instead.
 
-## Quickasrt
+## Quickstart
 
 Add the `<io-repl>` script to the head of your HTML document:
 
@@ -116,7 +116,7 @@ You can customize the REPL using the following attributes:
 - `pyodide-src` (string): The path to a pyodide module to import. If not provided, defaults
   to https://cdn.jsdelivr.net/pyodide/v0.23.4/full/pyodide.js.
 - `src` (string): The path to a file containing Python code. Its text will be
-  set as the code input of the REPL, taking precedent over any text inside the
+  set as the code input of the REPL, taking precedence over any text inside the
   `<io-repl></io-repl>` tags.
 
 Here's an example of how to do this:
